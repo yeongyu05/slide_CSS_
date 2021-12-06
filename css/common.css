@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style: none;
+}
+.slide {
+    height: 300px;
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.slide ul {
+    width: 1200px;
+    position: absolute;
+}
+.slide li {
+    width: 1200px;
+    height: 300px;
+}
+.item1 {
+    left: 0px;
+    animation: slide1 6s infinite;
+}
+.item2 {
+    left: 1200px;
+    animation: slide2 6s infinite;
+}
+.item3 {
+    left: -1200px;
+    animation: slide3 6s infinite;
+}
+.item1 > li {
+    background-image: url(../slide1.jpg);
+}
+.item2 > li{
+    background-image: url(../slide2.jpg);
+}
+.item3 > li {
+    background-image: url(../slide3.jpg);
+}
+@keyframes slide1 {
+    0% {
+        margin-left: 0;
+        z-index: -3;
+    }
+    25% {
+        margin-left: 0;
+        z-index: 1;
+    }
+    30% {
+        margin-left: -100%;
+        z-index: 1;
+    }
+    55% {
+        margin-left: -100%;
+        z-index: -3;
+    }
+    60% {
+        margin-left: 100%;
+        z-index: -3;
+    }
+    95% {
+        margin-left: 100%;
+        z-index: -3;
+    }
+    100% {
+        margin-left: 0;
+        z-index: -3;
+    }
+}
+ @keyframes slide2 {
+    0% {
+        margin-left: 0;
+        z-index: -1;
+    }
+    25% {
+        margin-left: 0;
+        z-index: -1;
+    }
+    30% {
+        margin-left: -100%;
+        z-index: -1;
+    }
+    55% {
+        margin-left: -100%;
+        z-index: 1;
+    }
+    60% {
+        margin-left: -200%;
+        z-index: 1;
+    }
+    95% {
+        margin-left: -200%;
+        z-index: -4;
+    }
+    100% {
+        margin-left: 0;
+        z-index: -4;
+    }
+}
+@keyframes slide3 {
+    0% {
+        margin-left: 0;
+        z-index: -2;
+    }
+    25% {
+        margin-left: 0;
+        z-index: -2;
+    }
+    30% {
+        margin-left: 200%;
+        z-index: -2;
+    }
+    55% {
+        margin-left: 200%;
+        z-index: -2;
+    }
+    60% {
+        margin-left: 100%;
+        z-index: -2;
+    }
+    95% {
+        margin-left: 100%;
+        z-index: 1;
+    }
+    100% {
+        margin-left: 0;
+        z-index: 1;
+    }
+}
